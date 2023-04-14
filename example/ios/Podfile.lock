@@ -1,0 +1,29 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_recaptcha_enterprise (0.0.1):
+    - Flutter
+    - RecaptchaEnterprise (~> 18.1.2)
+  - RecaptchaEnterprise (18.1.2)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_recaptcha_enterprise (from `.symlinks/plugins/flutter_recaptcha_enterprise/ios`)
+
+SPEC REPOS:
+  trunk:
+    - RecaptchaEnterprise
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_recaptcha_enterprise:
+    :path: ".symlinks/plugins/flutter_recaptcha_enterprise/ios"
+
+SPEC CHECKSUMS:
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  flutter_recaptcha_enterprise: 43a34a737d33e442387152073e86e275e1075297
+  RecaptchaEnterprise: 00418359622f3b3e0d56036be7d1544f174e9769
+
+PODFILE CHECKSUM: 985e5b058f26709dc81f9ae74ea2b2775bdbcefe
+
+COCOAPODS: 1.12.0
