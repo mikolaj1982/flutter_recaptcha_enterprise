@@ -1,4 +1,4 @@
-group 'it.matteoricupero.flutter_recaptcha_enterprise'
+group 'com.debowski.flutter_recaptcha_enterprise'
 version '1.0-SNAPSHOT'
 
 buildscript {

@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="it.matteoricupero.flutter_recaptcha_enterprise_example">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.debowski.flutter_recaptcha_enterprise_example">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

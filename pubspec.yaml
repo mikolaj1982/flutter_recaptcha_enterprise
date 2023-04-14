@@ -21,7 +21,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: it.matteoricupero.flutter_recaptcha_enterprise
+        package: com.debowski.flutter_recaptcha_enterprise
         pluginClass: FlutterRecaptchaEnterprisePlugin
       ios:
         pluginClass: FlutterRecaptchaEnterprisePlugin

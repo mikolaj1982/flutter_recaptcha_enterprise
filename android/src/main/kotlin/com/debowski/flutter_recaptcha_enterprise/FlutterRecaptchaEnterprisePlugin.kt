@@ -1,4 +1,4 @@
-package it.matteoricupero.flutter_recaptcha_enterprise
+package com.debowski.flutter_recaptcha_enterprise
 
 import android.app.Application
 import android.util.Log
