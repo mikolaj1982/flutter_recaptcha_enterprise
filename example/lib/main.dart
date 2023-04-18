@@ -33,6 +33,12 @@ class _MyAppState extends State<MyApp> {
   String result = "action";
   String score = "unknown";
 
+  @override
+  void initState() {
+    super.initState();
+    initPlatformState();
+  }
+
   Future<void> initPlatformState() async {
     String envRaw = await rootBundle.loadString('assets/env.json');
     var env = json.decode(envRaw) as Map<String, dynamic>;
@@ -45,6 +51,18 @@ class _MyAppState extends State<MyApp> {
     } else {
       await flutterRecaptchaEnterprise.setupIOS(siteKeyIOS);
     }
+
+    String token = await getToken();
+    setState(() {
+      // log(token);
+      result = token;
+    });
+  }
+
+  Future<String> getToken() async{
+    String customAction = "test";
+    String result = await flutterRecaptchaEnterprise.execute(RecaptchaAction.custom(customAction));
+    return result;
   }
 
   Future<double?> getRecaptchaScore(String token) async {
@@ -94,29 +112,32 @@ class _MyAppState extends State<MyApp> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                TextButton(
-                  onPressed: () async {
-                    await initPlatformState();
-
-                    setState(() {
-                      result = "ok";
-                    });
-                  },
-                  child: const Text("setup"),
-                ),
-                TextButton(
-                  onPressed: () async {
-                    String customAction = "test";
-
-                    String result = await flutterRecaptchaEnterprise.execute(RecaptchaAction.custom(customAction));
-
-                    setState(() {
-                      // log(result);
-                      this.result = result;
-                    });
-                  },
-                  child: Text(result),
-                ),
+                // TextButton(
+                //   onPressed: () async {
+                //     await initPlatformState();
+                //
+                //     setState(() {
+                //       result = "ok";
+                //     });
+                //   },
+                //   child: const Text("setup"),
+                // ),
+                // TextButton(
+                //   onPressed: () async {
+                //     // String customAction = "test";
+                //     //
+                //     // String result = await flutterRecaptchaEnterprise.execute(RecaptchaAction.custom(customAction));
+                //
+                //     String token = await getToken();
+                //
+                //     setState(() {
+                //       log(token);
+                //       this.result = token;
+                //     });
+                //   },
+                //   child: Text(result),
+                // ),
+                Text(result),
                 TextButton(
                   onPressed: () async {
                     final token = result;
